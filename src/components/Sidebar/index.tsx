@@ -10,9 +10,9 @@ import {
   User,
 } from "phosphor-react"
 import { NavLink } from "react-router-dom"
-import logo from "../../assets/logo.svg"
 
 import "./style.css"
+import logo from "../../assets/logo.svg"
 
 export function Sidebar() {
   return (
@@ -20,10 +20,10 @@ export function Sidebar() {
       <img src={logo} alt="Twitter Logo" className="logo" />
 
       <nav className="main-navigation">
-        <a href="">
+        <NavLink to="/">
           <House weight="fill" />
           <span>Home</span>
-        </a>
+        </NavLink>
         <a href="">
           <Hash />
           <span>Explore</span>
