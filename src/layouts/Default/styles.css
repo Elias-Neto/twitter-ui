@@ -1,0 +1,18 @@
+.layout {
+  margin: 0 auto;
+  max-width: 1000rem;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+}
+
+.content {
+  border-inline: 1px solid #ebeef0;
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 8rem 1fr;
+  }
+}
