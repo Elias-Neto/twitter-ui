@@ -1,13 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import { RouterProvider } from "react-router-dom"
 
 import "./styles/global.css"
 
-import { Header } from "./components/Header"
-import { Sidebar } from "./components/Sidebar"
+import { router } from "./routes"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Sidebar />
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
