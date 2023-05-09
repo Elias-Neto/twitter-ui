@@ -22,7 +22,7 @@ export function Timeline() {
   }
 
   function handleHotKeySubmit(event: KeyboardEvent) {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
       setTweets([...tweets, newTweet])
       setNewTweet("")
     }
@@ -52,8 +52,8 @@ export function Timeline() {
 
       <Separator />
 
-      {tweets.map((tweet) => (
-        <Tweet key={tweet} content={tweet} />
+      {tweets.map((tweet, index) => (
+        <Tweet key={index} content={tweet} />
       ))}
     </main>
   )
